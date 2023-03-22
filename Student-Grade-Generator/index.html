@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Challenge 1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Student Grade Generator</h1>
+    <form>
+        <table>
+            <tr>
+              <th>Subjects</th>
+              <td>Student ID</td>
+              <td>English:</td>
+              <td>Kiswahili:</td>
+              <td>Mathematics:</td>
+              <td>Environment:</td>
+              <td>Art &amp; Craft:</td>
+              <td>Music:</td>
+              <td>Hygiene &amp; Nutrition:</td>
+            </tr>
+            <tr>
+              <th>Input Marks</th>
+              <td><input type="number" id="student" name="student" min="999" max="9999" required></td>
+              <td><input type="number" id="english" name="english" min="0" max="100" required></td>
+              <td><input type="number" id="kiswahili" name="kiswahili" min="0" max="100" required></td>
+              <td><input type="number" id="math" name="math" min="0" max="100" required></td>
+              <td><input type="number" id="environment" name="environment" min="0" max="100" required></td>
+              <td><input type="number" id="art" name="art" min="0" max="100" required></td>
+              <td><input type="number" id="music" name="music" min="0" max="100" required></td>
+              <td><input type="number" id="hygiene" name="hygiene" min="0" max="100" required></td>
+            </tr>
+            <tr>
+              <th>Marks</th>
+              <td id="student-Id"></td>
+              <td id="english-marks"></td>
+              <td id="kiswahili-marks"></td>
+              <td id="math-marks"></td>
+              <td id="environment-marks"></td>
+              <td id="art-marks"></td>
+              <td id="music-marks"></td>
+              <td id="hygiene-marks"></td>
+            </tr>
+            <tr>
+              <th>Grades</th>
+              <td id="student-Id"></td>
+              <td id="english-grade"></td>
+              <td id="kiswahili-grade"></td>
+              <td id="math-grade"></td>
+              <td id="environment-grade"></td>
+              <td id="art-grade"></td>
+              <td id="music-grade"></td>
+              <td id="hygiene-grade"></td>
+            </tr>
+          </table>
+      <button type="submit" id="submit-button">Submit</button>
+      <button type="button" id="clear-button">Clear</button>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html> 
+ 

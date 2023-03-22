@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Challenge 1</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <h1>Net Salary Calculator</h1>
+    <form>
+        <table>
+            <thead>
+              <tr>
+                <th>Gross Pay</th>
+                <th>NSSF
+                    <input type="radio" id="nssf_tier1" value="I" name="tier"> I
+                    <input type="radio" id="nssf_tier2" value="II" name="tier"> II
+                </th>
+                <th>NHIF</th>
+                <th>PAYE</th>
+                <th>Total Deductions</th>
+                <th>Net Salary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" id="grossPay" required></td>
+                <td id="NSSF"></td>
+                <td id="NHIF"></td>
+                <td id="PAYE"></td>
+                <td id="Total_Deductions"></td>
+                <td id="Net_Salary"></td>
+              </tr>
+            </tbody>
+          </table>
+          
+      <button type="submit" id="submit-button">Submit</button>
+      <button type="button" id="clear-button">Clear</button>
+    </form>
+    <script src="./script.js"></script>
+  </body>
+</html>

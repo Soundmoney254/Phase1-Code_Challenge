@@ -1,0 +1,58 @@
+
+body {
+  background-color:burlywood;
+}
+h1 {
+  text-align: center
+}
+
+form {
+  margin: 50px auto;
+  padding: 30px;
+  width: 1300px;
+  background-color:skyblue;
+  text-align: center;
+}
+
+input[type="number"] {
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+input[type="number"]:invalid {
+  border-color: red;
+}
+
+input[type="number"]:valid {
+  border-color: white;
+}
+
+#submit-button, #clear-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: greenyellow;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+table {
+  margin: 50px auto;
+  border-collapse: collapse;
+  border: 2px solid black;
+  text-align: center;
+  width: 1300px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+  width: 140;
+
+}
+ 

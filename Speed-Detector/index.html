@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Code Challenge 1</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Speed Detector</h1>
+    <form>
+        <table>
+            <thead>
+              <tr>
+                <th>Speed</th>
+                <th>Total Demerits</th>
+                <th>License Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" id="speed" max="1000" required/></td>
+                <td id="demerits"></td>
+                <td id="license-status"></td>
+              </tr>
+            </tbody>
+          </table>
+      <button type="submit" id="submit-button">Submit</button>
+      <button type="button" id="clear-button">Clear</button>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>
