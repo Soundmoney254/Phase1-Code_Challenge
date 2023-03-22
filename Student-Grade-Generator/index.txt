@@ -1,5 +1,5 @@
-
-1.Student Grade Generator
+1. Project Title
+Student Grade Generator
 
 2. Project Description
 This is a basic web application that allows users to generate student grades from the marks they input. 
@@ -32,11 +32,11 @@ The  marks and calculated grades are displayed in the table below the input fiel
 
 Features:
 The web page has a simple and user-friendly interface.
-The web page asassigns a grade for each subject based on the provided grading system.
+The web page assigns a grade for each subject based on the provided grading system.
 The web page allows the user to clear the form and start over.
 
 Styling:
-The background color of the body is set to burlywood, and the h1 tag is centered. 
+The background color of the body is set to burlywood, and all of the text is centered. 
 The form is styled with a sky blue background color, and the input fields have a white border when valid and a red border when invalid. 
 The table has a black border, and the text in the table cells is centered.
 

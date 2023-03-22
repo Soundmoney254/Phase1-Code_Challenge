@@ -1,3 +1,4 @@
+
 const submitButton = document.querySelector('#submit-button');
 const clearButton = document.querySelector('#clear-button')
 //Create an Event Listener for the submit button

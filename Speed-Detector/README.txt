@@ -1,5 +1,5 @@
 1. Project Title
-Speed Detector Code Challenge
+Speed Detector 
 
 2. Project Description
 This project is a simple speed detector. 
@@ -18,15 +18,15 @@ Download the code files from the repository.
 Open the index.html file in a web browser.
 Enter a speed value into the input field.
 Click the "Submit" button to calculate the number of demerits and license status based on the speed.
-Click the "Clear" button to clear all input fields
+Click the "Clear" button to clear the form.
 
 Features:
 The web page has a simple and user-friendly interface.
-The web page calculates the number of demerits to assign to a driver and whether or not to suspend their license.
+The web page calculates the number of demerits to assign a driver and whether or not to suspend their license.
 The web page allows the user to clear the form and start over.
 
 Styling:
-The background color of the body is set to burlywood, and the h1 tag is centered. 
+The background color of the body is set to burlywood, and all of the text is centered. 
 The form is styled with a sky blue background color, and the input fields have a white border when valid and a red border when invalid. 
 The table has a black border, and the text in the table cells is centered.
 
