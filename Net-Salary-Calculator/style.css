@@ -5,7 +5,6 @@ body {
   h1 {
     text-align: center
   }
-  
   form {
     margin: 50px auto;
     padding: 30px;
@@ -13,7 +12,6 @@ body {
     background-color:skyblue;
     text-align: center;
   }
-  
   input[type="number"] {
     padding: 5px;
     border-radius: 3px;
@@ -21,7 +19,6 @@ body {
     margin-bottom: 10px;
     width: 50%;
   }
-  
   #submit-button, #clear-button {
     display: inline-block;
     padding: 5px 10px;
@@ -31,8 +28,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  
   table {
     margin: 10px auto;
     border-collapse: collapse;
@@ -40,11 +35,9 @@ body {
     text-align: center;
     width: 1200px;
   }
-  
   th, td {
     padding: 10px;
     border: 1px solid black;
     width: auto;
-  
   }
   

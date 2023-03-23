@@ -1,84 +1,54 @@
-// get the DOM elements
-const form = document.querySelector('form');
-const studentId = document.querySelector('#student');
-const studentIdMarks = document.querySelector('#student-Id');
-const english = document.querySelector('#english');
-const kiswahili = document.querySelector('#kiswahili');
-const math = document.querySelector('#math');
-const environment = document.querySelector('#environment');
-const art = document.querySelector('#art');
-const music = document.querySelector('#music');
-const hygiene = document.querySelector('#hygiene');
-const englishMarks = document.querySelector('#english-marks');
-const kiswahiliMarks = document.querySelector('#kiswahili-marks');
-const mathMarks = document.querySelector('#math-marks');
-const environmentMarks = document.querySelector('#environment-marks');
-const artMarks = document.querySelector('#art-marks');
-const musicMarks = document.querySelector('#music-marks');
-const hygieneMarks = document.querySelector('#hygiene-marks');
-const englishGrade = document.querySelector('#english-grade');
-const kiswahiliGrade = document.querySelector('#kiswahili-grade');
-const mathGrade = document.querySelector('#math-grade');
-const environmentGrade = document.querySelector('#environment-grade');
-const artGrade = document.querySelector('#art-grade');
-const musicGrade = document.querySelector('#music-grade');
-const hygieneGrade = document.querySelector('#hygiene-grade');
-const submitButton = document.querySelector('#submit-button');
-const clearButton = document.querySelector('#clear-button');
+// Initialize the HTML elements using DOM
+const form = document.querySelector("form");
+const studentId = document.querySelector("#student");
+const english = document.querySelector("#english");
+const kiswahili = document.querySelector("#kiswahili");
+const math = document.querySelector("#math");
+const environment = document.querySelector("#environment");
+const art = document.querySelector("#art");
+const music = document.querySelector("#music");
+const hygiene = document.querySelector("#hygiene");
 
-// grading function
+//Grading function
 function getGrade(marks) {
   if (marks > 79) {
-    return 'A';
+    return "A";
   } else if (marks > 59) {
-    return 'B';
+    return "B";
   } else if (marks > 49) {
-    return 'C';
+    return "C";
   } else if (marks > 39) {
-    return 'D';
+    return "D";
   } else {
-    return 'E';
+    return "E";
   }
 }
-
-// event listener for form submission
-form.addEventListener('submit', function(event) {
-  // prevent the form from submitting and refreshing the page
+//An event listener for the submit button on the form
+form.addEventListener("submit",(event) => {
   event.preventDefault();
 
-  // get the values of the input fields
-  const studentIdValue = studentId.value;
-  const englishValue = english.value;
-  const kiswahiliValue = kiswahili.value;
-  const mathValue = math.value;
-  const environmentValue = environment.value;
-  const artValue = art.value;
-  const musicValue = music.value;
-  const hygieneValue = hygiene.value;
+  //Add the Input values to the corresponding cells in row 3
+  studentIdMarks.textContent = studentId.value;
+  englishMarks.textContent = english.value;
+  kiswahiliMarks.textContent = kiswahili.value;
+  mathMarks.textContent = math.value;
+  environmentMarks.textContent = environment.value;
+  artMarks.textContent = art.value;
+  musicMarks.textContent = music.value;
+  hygieneMarks.textContent = hygiene.value;
 
-  // add the values to the corresponding cells in row 3
-  document.getElementById('student-Id').innerHTML = studentIdValue;
-  englishMarks.innerHTML = englishValue;
-  kiswahiliMarks.innerHTML = kiswahiliValue;
-  mathMarks.innerHTML = mathValue;
-  environmentMarks.innerHTML = environmentValue;
-  artMarks.innerHTML = artValue;
-  musicMarks.innerHTML = musicValue;
-  hygieneMarks.innerHTML = hygieneValue;
-
-  // calculate grades and add them to the corresponding cells in row 4
-  englishGrade.innerHTML = getGrade(englishValue);
-  kiswahiliGrade.innerHTML = getGrade(kiswahiliValue);
-  mathGrade.innerHTML = getGrade(mathValue);
-  environmentGrade.innerHTML = getGrade(environmentValue);
-  artGrade.innerHTML = getGrade(artValue);
-  musicGrade.innerHTML = getGrade(musicValue);
-  hygieneGrade.innerHTML = getGrade(hygieneValue);
+  //Calculate grades and add them to the corresponding cells in row 4
+  englishGrade.textContent = getGrade(english.value);
+  kiswahiliGrade.textContent = getGrade(kiswahili.value);
+  mathGrade.textContent = getGrade(math.value);
+  environmentGrade.textContent = getGrade(environment.value);
+  artGrade.textContent = getGrade(art.value);
+  musicGrade.textContent = getGrade(music.value);
+  hygieneGrade.textContent = getGrade(hygiene.value);
 
 });
-
-// event listener for clear button
-clearButton.addEventListener('click', function() {
+//An event listener for the clear button
+clearButton.addEventListener('click', () => {
   studentId.value = '';
   english.value = '';
   kiswahili.value = '';
@@ -103,5 +73,3 @@ clearButton.addEventListener('click', function() {
   musicGrade.textContent = '';
   hygieneGrade.textContent = '';
 });
-
- 

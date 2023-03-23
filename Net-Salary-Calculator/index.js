@@ -1,23 +1,14 @@
+// Initialize the HTML elements using DOM
+const form = document.querySelector("form");
 
-const submitButton = document.querySelector('#submit-button');
-const clearButton = document.querySelector('#clear-button')
-//Create an Event Listener for the submit button
-submitButton.addEventListener("click", function(event) {
+//An event listener for the submit button on the form
+form.addEventListener("submit",(event) => {
     event.preventDefault();
     calculateDeduction();
   });
-;
-clearButton.addEventListener('click', function() {
-    document.getElementById("PAYE").textContent = '';
-    document.getElementById("NHIF").textContent = '';
-    document.getElementById("NSSF").textContent = '';
-    document.getElementById("Total_Deductions").textContent = '';
-    document.getElementById("Net_Salary").textContent = '';
-    document.getElementById("grossPay").value = '';
-  });
-//Calculate Deductions
+//Calculate deductions function
 function calculateDeduction() {
-const grossPay = document.getElementById("grossPay").value;
+const grossPay = document.getElementById("grossPayInput").value;
     let nhifDeduction = 0;
     if (grossPay < 6000) {
       nhifDeduction = 150;
@@ -54,7 +45,7 @@ const grossPay = document.getElementById("grossPay").value;
     } else {
       nhifDeduction = 1700;
     }
-// calculate PAYE tax deduction
+// Calculate the PAYE tax deduction
   let payeDeduction = 0;
   if (grossPay <= 24000) {
     payeDeduction = grossPay * 0.1;
@@ -63,27 +54,31 @@ const grossPay = document.getElementById("grossPay").value;
   } else {
     payeDeduction = 5708.25 + (grossPay - 32333) * 0.3;
   }
-// get the value of selected radio button for NSSF tier
+// Get the value of selected radio button for NSSF tier
  const nssfTier1 = document.getElementById("nssf_tier1").checked;
  const nssfTier2 = document.getElementById("nssf_tier2").checked;
-
- // calculate NSSF deduction based on selected tier and gross pay
+ // Calculate the NSSF deduction based on selected tier and gross pay
  let nssfDeduction = 0;
  if (nssfTier1) {
    nssfDeduction = Math.min(grossPay * 0.06, 6000);
  } else if (nssfTier2) {
    nssfDeduction = Math.min(Math.max(grossPay * 0.06, 6001), 18000);
  }
-
-//update the NHIF, PAYE and Total Deductions cells with the calculated values
-    document.getElementById("PAYE").textContent = payeDeduction.toFixed(2);
-    document.getElementById("NHIF").textContent = nhifDeduction.toFixed(2);
-    document.getElementById("NSSF").textContent = nssfDeduction.toFixed(2);
-    const totalDeductions = nhifDeduction + payeDeduction +nssfDeduction;
-    document.getElementById("Total_Deductions").textContent = totalDeductions;
-    const netSalary = grossPay-totalDeductions;
-    document.getElementById("Net_Salary").textContent = netSalary
+//Updating the NHIF, NSSF, PAYE and total deductions cells with the calculated values
+    paye.textContent = payeDeduction.toFixed(2);
+    nhif.textContent = nhifDeduction.toFixed(2);
+    nssf.textContent = nssfDeduction.toFixed(2);
+    const totalDeductionsValue = nhifDeduction + payeDeduction +nssfDeduction;
+    totalDeductions.textContent = totalDeductionsValue.toFixed(2);
+    const netSalaryValue = grossPay-totalDeductionsValue;
+    netSalary.textContent = netSalaryValue
 }
-
-
-  
+//An event listener for the clear button
+clearButton.addEventListener("click", () => {
+  paye.textContent = '';
+  nhif.textContent = '';
+  nssf.textContent = '';
+  totalDeductions.textContent = '';
+  netSalary.textContent = '';
+  grossPayInput.value = '';
+});

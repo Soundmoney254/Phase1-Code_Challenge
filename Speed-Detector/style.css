@@ -5,7 +5,6 @@ body {
   h1 {
     text-align: center
   }
-  
   form {
     margin: 50px auto;
     padding: 30px;
@@ -13,24 +12,20 @@ body {
     background-color:skyblue;
     text-align: center;
   }
-  
   input[type="number"] {
     padding: 5px;
-    border-radius: 3px;
+    border-radius: 6px;
     border: 1px solid black;
     margin-bottom: 10px;
     width: 50%;
   }
-  
   input[type="number"]:invalid {
     border-color: red;
   }
-  
   input[type="number"]:valid {
     border-color: white;
   }
-  
-  #submit-button, #clear-button {
+  #submitButton, #clearButton {
     display: inline-block;
     padding: 5px 10px;
     background-color: greenyellow;
@@ -39,8 +34,6 @@ body {
     border-radius: 5px;
     cursor: pointer;
   }
-  
-  
   table {
     margin: 50px auto;
     border-collapse: collapse;
@@ -48,11 +41,9 @@ body {
     text-align: center;
     width: 600px;
   }
-  
   th, td {
     padding: 10px;
     border: 1px solid black;
     width: 140;
-  
   }
   
